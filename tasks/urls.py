@@ -4,8 +4,9 @@ from tasks import views
 
 router = routers.DefaultRouter()
 router.register(r'tasks', views.TaskView, 'tasks')
-url_patterns = [
+
+urlpatterns = [
     path('api/v1', include(router.urls))
-]
+] 
 
 # All of this code is equivalent to DELETE, POST, GET, PUT, ...
